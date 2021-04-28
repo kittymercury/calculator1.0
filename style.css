@@ -1,0 +1,36 @@
+body {
+  background: linear-gradient(#e66465, #9198e5);
+}
+
+.calculator {
+  width: 308px;
+  margin: 20px auto 400px;
+  border: 3px solid white;
+}
+
+.display {
+  width: 308px;
+  background-color: white;
+  height: 120px;
+  font-size: 20px;
+  color: black;
+}
+
+.keyboard {
+  display: table;
+}
+
+.button {
+  display: table-cell;
+  border: 1px solid white;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+  margin: 10px 10px 0 0;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+
+}
