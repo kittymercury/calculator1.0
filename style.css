@@ -13,6 +13,43 @@ body {
   border: 3px solid white;
 }
 
+.display {
+  width: 298px;
+  background-color: white;
+  height: 120px;
+  font-size: 30px;
+  color: black;
+  line-height: 120px;
+  text-align: right;
+  padding: 0 5px 0 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: rtl;
+}
+
+.keyboard {
+  display: table;
+}
+
+.button {
+  display: table-cell;
+  border: 1px solid white;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+  margin: 10px 10px 0 0;
+  width: 55px;
+  height: 55px;
+  cursor: pointer;
+  font-size: 35px;
+  color: white;
+}
+
+.button.clear {
+  width: 308px;
+}
+
+/* is-mobile */
 body.is-mobile {
   margin: 0;
   height: 100%;
@@ -35,6 +72,9 @@ body.is-mobile .calculator .display  {
   height: 100%;
   padding: 0 5% 0 5%;
   font-size: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  direction: rtl;
 }
 
 body.is-mobile .calculator .keyboard {
@@ -58,35 +98,4 @@ body.is-mobile .calculator .keyboard .keyboard-line .button {
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-
-
-.display {
-  width: 308px;
-  background-color: white;
-  height: 120px;
-  font-size: 25px;
-  color: black;
-  line-height: 120px;
-  text-align: right;
-}
-
-.keyboard {
-  display: table;
-}
-
-.button {
-  display: table-cell;
-  border: 1px solid white;
-  text-align: center;
-  vertical-align: middle;
-  padding: 10px;
-  margin: 10px 10px 0 0;
-  width: 55px;
-  height: 55px;
-  cursor: pointer;
-  font-size: 35px;
-  color: white;
-
 }
