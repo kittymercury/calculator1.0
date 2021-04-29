@@ -34,5 +34,5 @@ resultButton.onclick = function () {
   let executeFunctionBody = new Function(functionBody);
   let result = executeFunctionBody();
   display.textContent = result;
-  calculationArea = '';
+  calculationArea = result;
 }
