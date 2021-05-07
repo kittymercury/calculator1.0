@@ -22,9 +22,8 @@ body {
   line-height: 120px;
   text-align: right;
   padding: 0 5px 0 5px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  direction: rtl;
+  overflow-x: scroll;
+  overflow-y: hidden;
 }
 
 .keyboard {
@@ -72,9 +71,6 @@ body.is-mobile .calculator .display  {
   height: 100%;
   padding: 0 5% 0 5%;
   font-size: 40px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  direction: rtl;
 }
 
 body.is-mobile .calculator .keyboard {
