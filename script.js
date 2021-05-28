@@ -3,6 +3,8 @@ let numbers = document.querySelectorAll('.number');
 let operators = document.querySelectorAll('.operator');
 let clearButton = document.querySelector('.clear');
 let resultButton = document.querySelector('.result');
+let backspaceButton = document.querySelector('.backspace');
+
 let calculationArea = '';
 let resultGiven = false;
 let operatorSymbols = ['+', '-', '/', '*'];
@@ -22,7 +24,15 @@ for (let number of numbers) {
       return;
     }
     if (calculationArea.includes('.') && input === '.') {
-      return;
+      let indexOfPoint = calculationArea.split('').reverse().indexOf('.');
+      let operatorIndexes = operatorSymbols.map((operator) => calculationArea.split('').reverse().indexOf(operator))
+      let lastOperatorIndex = operatorIndexes.sort().reverse()[0];
+
+      if ((lastOperatorIndex !== undefined) && (lastOperatorIndex < indexOfPoint)) {
+
+      } else {
+         return;
+      }
     }
     if (resultGiven) {
       calculationArea = '';
@@ -53,6 +63,11 @@ for (let operator of operators) {
 
 clearButton.onclick = function() {
   calculationArea = '';
+  display.textContent = calculationArea;
+};
+
+backspaceButton.onclick = function() {
+  calculationArea = calculationArea.substring(0, calculationArea.length - 1);
   display.textContent = calculationArea;
 };
 
